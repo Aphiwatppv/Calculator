@@ -8,5 +8,7 @@ namespace Calculator
 {
     public class UserInput
     {
+        public int? Input { get; set; }
+        
     }
 }
