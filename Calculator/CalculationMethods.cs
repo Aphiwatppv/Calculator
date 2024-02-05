@@ -12,8 +12,7 @@ namespace Calculator
     public class CalculationMethods
     {
 
-
-        #region<Sumation>
+        #region<Summation>
         //Additional Method
         public static int? SummationMethod(int[] numbers )
         {
@@ -128,13 +127,20 @@ namespace Calculator
             return result;
         }
         #endregion
-        #region <Addtion Methods>
-        public int? AddtionArithmetic(int? number1 , int? number2)
+        #region <Addition Methods>
+        public int? AdditionArithmetic(int? number1 , int? number2)
         {
             return number1+number2;
         }
-
-        public double? AddtionArithmetic(double? number1, double? number2)
+        public double? AdditionArithmetic(double? number1, double? number2)
+        {
+            return number1 + number2;
+        }
+        public long? AdditionArithmetic(long? number1, long? number2)
+        {
+            return number1 + number2;
+        }
+        public decimal? AdditionArithmetic(decimal? number1, decimal? number2)
         {
             return number1 + number2;
         }
