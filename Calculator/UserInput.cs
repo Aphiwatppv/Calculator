@@ -9,6 +9,6 @@ namespace Calculator
     public class UserInput
     {
         public int? Input { get; set; }
-        
+        public int[] Inputs { get; set; }
     }
 }
