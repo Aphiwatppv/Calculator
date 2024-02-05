@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Calculator
 {
-    public class UserInput
+    public static class UserInput
     {
-        public int? Input { get; set; }
-        public int[] Inputs { get; set; }
+        public static int? Input { get; set; }
+        public static int[] Inputs { get; set; }
     }
 }

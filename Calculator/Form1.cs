@@ -15,6 +15,8 @@ namespace Calculator
         public Form1()
         {
             InitializeComponent();
+            VerifiesMethod verifiesMethod = new VerifiesMethod("Test");
+
         }
     }
 }
