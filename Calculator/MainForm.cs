@@ -10,7 +10,6 @@ namespace Calculator
         public Main()
         {
             InitializeComponent();
-            //VerifiesMethod verifiesMethod = new VerifiesMethod("Test");
             InitialUserControlInterface();
 
         }
@@ -24,61 +23,86 @@ namespace Calculator
         private void InitialUserControlInterface()
         {
 
-            //btn Calling Btn
+            // Initial Setup dimension 
 
-            //Panel Setup
-            panelbar.Size = new System.Drawing.Size(this.Width, this.Height * 5 / 100);
+            #region Size of objects
+            // Panel 
+            int UIsizeWidth = this.Width;
+            int UIsizeHeight = this.Height;
+            panelbar.Size = new System.Drawing.Size(UIsizeWidth, (int)(UIsizeHeight * 0.08));
+            this.Controls.Add(panelbar);
+
+            // Panel;
+            int PanelPadWidth = (int)(UIsizeWidth * 2 / 3);
+            int PanelPadHeigh = (int)(UIsizeHeight -panelbar.Size.Height);
+
+            panelPad.Size = new System.Drawing.Size(PanelPadWidth, PanelPadHeigh);
+            // Set up Gap Between Objects;
+
+            int gapwidth = (int)(0.01* PanelPadWidth);
+            int gapheight = (int)0.008* PanelPadHeigh;
+
+            //Textbox UserInput
+            int txtsizeWidth = ((int)panelPad.Width-2*gapwidth);
+            int txtsizeHeight = (int)((panelPad.Size.Height - 8 * gapheight) / 7);
+            txtInput.Size = new System.Drawing.Size(txtsizeWidth,txtsizeHeight);
+            //Pad1 to Pad9 
+            int btnPadsWidth = (int)((txtsizeWidth - 4 * gapwidth) / 5);
+            int btnPadsHeight = txtsizeHeight;
 
 
-            PanelPad.Size = new System.Drawing.Size(this.Width * 2 / 3, this.Height - panelbar.Height);
+            Button[] buttons =  new Button[] { btnPad1, btnPad2, btnPad3, btnPad4, btnPad5, btnPad6, btnPad7, btnPad8, btnPad9 };
 
-            //btnpadsize 1-9 
-            int btnwidth = PanelPad.Size.Width / 5;
-            int btnheight = PanelPad.Size.Height / 6;
-
-            btnPad1.Size = new System.Drawing.Size(btnwidth, btnheight);
-            btnPad2.Size = new System.Drawing.Size(btnwidth, btnheight);
-            btnPad3.Size = new System.Drawing.Size(btnwidth, btnheight);
-            btnPad4.Size = new System.Drawing.Size(btnwidth, btnheight);
-            btnPad5.Size = new System.Drawing.Size(btnwidth, btnheight);
-            btnPad6.Size = new System.Drawing.Size(btnwidth, btnheight);
-            btnPad7.Size = new System.Drawing.Size(btnwidth, btnheight);
-            btnPad8.Size = new System.Drawing.Size(btnwidth, btnheight);
-            btnPad9.Size = new System.Drawing.Size(btnwidth, btnheight);
-
-            //btnOperationSize
-
-
-            Button[] buttons = { btnPad1, btnPad2, btnPad3, btnPad4, btnPad5, btnPad6, btnPad7, btnPad8, btnPad9 };
-            foreach (Button btn in buttons)
-            {
-                btn.Size = new System.Drawing.Size(btnwidth, btnheight);
-                PanelPad.Controls.Add(btn); // Add button to PanelPad
-            }
-
-            int x = (int)(PanelPad.Width * 0.01);
-            int y = PanelPad.Size.Height - 2*btnheight - (int)(PanelPad.Height * 0.01);
-
-            // Arrange buttons
             for (int i = 0; i < buttons.Length; i++)
             {
-                if (i % 3 == 0 && i != 0)
-                {
-                    x = (int)(PanelPad.Width * 0.01); // Reset x to start of new row
-                    y -= btnheight + (int)(PanelPad.Height * 0.01); // Move y up for new row
-                }
+                buttons[i].Size = new System.Drawing.Size(btnPadsWidth,btnPadsHeight);
+                panelPad.Controls.Add(buttons[i]);
+            }
 
-                buttons[i].Size = new System.Drawing.Size(btnwidth, btnheight);
-                buttons[i].Location = new System.Drawing.Point(x, y);
-                PanelPad.Controls.Add(buttons[i]); // Add button to PanelPad
+            //Operation Pads
+            int btnOperatorWidth = (int)((3 * btnPadsWidth - gapwidth) / 2);
+            int btnOperatorHight = btnPadsHeight;
 
-                x += btnwidth + (int)(PanelPad.Width * 0.01); // Move x to next button position
+            Button[] btnOperators = new Button[] {btnAddition,btnSubtraction,btndivide,btnMultiply};
+
+            for (int i = 0; i < btnOperators.Length; i++)
+            {
+                btnOperators[i].Size = new System.Drawing.Size(btnOperatorWidth, btnOperatorHight);
+                panelPad.Controls.Add(btnOperators[i]);
             }
 
 
+            //Zero pad 
+            int ZeroPadWidth = (int)((2*btnPadsWidth+gapwidth));
+            int ZeroPadHight = btnPadsHeight;
+            btnPad0.Size = new System.Drawing.Size(ZeroPadWidth, ZeroPadHight);
+            panelPad.Controls.Add(btnPad0);
 
+            //Dot Pads
+            int DotPadWidth = (int)(btnPadsWidth);
+            int DotPadHeight = (int)(btnPadsHeight);
+            btnPaddot.Size = new System.Drawing.Size(btnPadsWidth, btnPadsHeight);
+            panelPad.Controls.Add(btnPaddot);
+            //Clear btn 
+
+            int clearbtnWidth = 2*btnPadsWidth + gapwidth;
+            int clearbtnHight = 2*btnPadsHeight+ gapheight;
+
+            btnClear.Size = new System.Drawing.Size(clearbtnWidth, clearbtnHight);
+            panelPad.Controls.Add(btnClear);
+
+            //btnEnter Size
+
+            int EnterbtnWidth = 2*btnPadsWidth + gapwidth;
+            int EnterbtnHigh = 4 * btnPadsHeight + 3*gapheight;
+
+            btnEnter.Size = new System.Drawing.Size(EnterbtnWidth, EnterbtnHigh);
+            panelPad.Controls.Add(btnEnter);
+            #endregion
 
         }
+
+
 
         private void btnSubtraction_Click(object sender, EventArgs e)
         {
