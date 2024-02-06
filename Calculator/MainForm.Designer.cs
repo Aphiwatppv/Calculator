@@ -29,7 +29,9 @@
         private void InitializeComponent()
         {
             this.panelPad = new System.Windows.Forms.Panel();
+            this.btnClear = new System.Windows.Forms.Button();
             this.btndivide = new System.Windows.Forms.Button();
+            this.btnEnter = new System.Windows.Forms.Button();
             this.txtInput = new System.Windows.Forms.TextBox();
             this.btnMultiply = new System.Windows.Forms.Button();
             this.btnPaddot = new System.Windows.Forms.Button();
@@ -45,15 +47,14 @@
             this.btnPad3 = new System.Windows.Forms.Button();
             this.btnPad2 = new System.Windows.Forms.Button();
             this.btnPad1 = new System.Windows.Forms.Button();
-            this.btnClear = new System.Windows.Forms.Button();
             this.panelbar = new System.Windows.Forms.Panel();
-            this.btnEnter = new System.Windows.Forms.Button();
             this.panelPad.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelPad
             // 
-            this.panelPad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.panelPad.AutoSize = true;
+            this.panelPad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.panelPad.Controls.Add(this.btnClear);
             this.panelPad.Controls.Add(this.btndivide);
             this.panelPad.Controls.Add(this.btnEnter);
@@ -77,11 +78,25 @@
             this.panelPad.Location = new System.Drawing.Point(0, 29);
             this.panelPad.Name = "panelPad";
             this.panelPad.Padding = new System.Windows.Forms.Padding(10);
-            this.panelPad.Size = new System.Drawing.Size(449, 508);
+            this.panelPad.Size = new System.Drawing.Size(394, 490);
             this.panelPad.TabIndex = 0;
+            // 
+            // btnClear
+            // 
+            this.btnClear.AutoSize = true;
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.ForeColor = System.Drawing.Color.White;
+            this.btnClear.Location = new System.Drawing.Point(270, 57);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(111, 90);
+            this.btnClear.TabIndex = 17;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
             // 
             // btndivide
             // 
+            this.btndivide.AutoSize = true;
             this.btndivide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btndivide.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btndivide.ForeColor = System.Drawing.Color.White;
@@ -92,9 +107,22 @@
             this.btndivide.Text = "/";
             this.btndivide.UseVisualStyleBackColor = true;
             // 
+            // btnEnter
+            // 
+            this.btnEnter.AutoSize = true;
+            this.btnEnter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEnter.ForeColor = System.Drawing.Color.White;
+            this.btnEnter.Location = new System.Drawing.Point(281, 256);
+            this.btnEnter.Name = "btnEnter";
+            this.btnEnter.Size = new System.Drawing.Size(100, 217);
+            this.btnEnter.TabIndex = 16;
+            this.btnEnter.Text = "Enter";
+            this.btnEnter.UseVisualStyleBackColor = true;
+            // 
             // txtInput
             // 
-            this.txtInput.Location = new System.Drawing.Point(6, 13);
+            this.txtInput.Location = new System.Drawing.Point(6, 6);
             this.txtInput.Multiline = true;
             this.txtInput.Name = "txtInput";
             this.txtInput.Size = new System.Drawing.Size(322, 38);
@@ -102,6 +130,7 @@
             // 
             // btnMultiply
             // 
+            this.btnMultiply.AutoSize = true;
             this.btnMultiply.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMultiply.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMultiply.ForeColor = System.Drawing.Color.White;
@@ -115,9 +144,10 @@
             // 
             // btnPaddot
             // 
+            this.btnPaddot.AutoSize = true;
             this.btnPaddot.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPaddot.ForeColor = System.Drawing.Color.White;
-            this.btnPaddot.Location = new System.Drawing.Point(168, 295);
+            this.btnPaddot.Location = new System.Drawing.Point(179, 392);
             this.btnPaddot.Name = "btnPaddot";
             this.btnPaddot.Size = new System.Drawing.Size(55, 42);
             this.btnPaddot.TabIndex = 14;
@@ -126,6 +156,7 @@
             // 
             // btnSubtraction
             // 
+            this.btnSubtraction.AutoSize = true;
             this.btnSubtraction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubtraction.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubtraction.ForeColor = System.Drawing.Color.White;
@@ -139,9 +170,10 @@
             // 
             // btnPad9
             // 
+            this.btnPad9.AutoSize = true;
             this.btnPad9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPad9.ForeColor = System.Drawing.Color.White;
-            this.btnPad9.Location = new System.Drawing.Point(168, 153);
+            this.btnPad9.Location = new System.Drawing.Point(179, 250);
             this.btnPad9.Name = "btnPad9";
             this.btnPad9.Size = new System.Drawing.Size(55, 42);
             this.btnPad9.TabIndex = 8;
@@ -150,9 +182,10 @@
             // 
             // btnPad8
             // 
+            this.btnPad8.AutoSize = true;
             this.btnPad8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPad8.ForeColor = System.Drawing.Color.White;
-            this.btnPad8.Location = new System.Drawing.Point(93, 153);
+            this.btnPad8.Location = new System.Drawing.Point(104, 250);
             this.btnPad8.Name = "btnPad8";
             this.btnPad8.Size = new System.Drawing.Size(55, 42);
             this.btnPad8.TabIndex = 7;
@@ -161,6 +194,7 @@
             // 
             // btnAddition
             // 
+            this.btnAddition.AutoSize = true;
             this.btnAddition.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddition.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddition.ForeColor = System.Drawing.Color.White;
@@ -173,9 +207,10 @@
             // 
             // btnPad7
             // 
+            this.btnPad7.AutoSize = true;
             this.btnPad7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPad7.ForeColor = System.Drawing.Color.White;
-            this.btnPad7.Location = new System.Drawing.Point(6, 153);
+            this.btnPad7.Location = new System.Drawing.Point(17, 250);
             this.btnPad7.Name = "btnPad7";
             this.btnPad7.Size = new System.Drawing.Size(55, 42);
             this.btnPad7.TabIndex = 6;
@@ -184,9 +219,10 @@
             // 
             // btnPad6
             // 
+            this.btnPad6.AutoSize = true;
             this.btnPad6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPad6.ForeColor = System.Drawing.Color.White;
-            this.btnPad6.Location = new System.Drawing.Point(168, 201);
+            this.btnPad6.Location = new System.Drawing.Point(179, 298);
             this.btnPad6.Name = "btnPad6";
             this.btnPad6.Size = new System.Drawing.Size(55, 42);
             this.btnPad6.TabIndex = 5;
@@ -195,9 +231,10 @@
             // 
             // btnPad5
             // 
+            this.btnPad5.AutoSize = true;
             this.btnPad5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPad5.ForeColor = System.Drawing.Color.White;
-            this.btnPad5.Location = new System.Drawing.Point(93, 201);
+            this.btnPad5.Location = new System.Drawing.Point(104, 298);
             this.btnPad5.Name = "btnPad5";
             this.btnPad5.Size = new System.Drawing.Size(55, 42);
             this.btnPad5.TabIndex = 4;
@@ -206,9 +243,10 @@
             // 
             // btnPad4
             // 
+            this.btnPad4.AutoSize = true;
             this.btnPad4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPad4.ForeColor = System.Drawing.Color.White;
-            this.btnPad4.Location = new System.Drawing.Point(6, 201);
+            this.btnPad4.Location = new System.Drawing.Point(17, 298);
             this.btnPad4.Name = "btnPad4";
             this.btnPad4.Size = new System.Drawing.Size(55, 42);
             this.btnPad4.TabIndex = 3;
@@ -217,9 +255,10 @@
             // 
             // btnPad0
             // 
+            this.btnPad0.AutoSize = true;
             this.btnPad0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPad0.ForeColor = System.Drawing.Color.White;
-            this.btnPad0.Location = new System.Drawing.Point(6, 297);
+            this.btnPad0.Location = new System.Drawing.Point(17, 394);
             this.btnPad0.Name = "btnPad0";
             this.btnPad0.Size = new System.Drawing.Size(132, 42);
             this.btnPad0.TabIndex = 13;
@@ -228,9 +267,10 @@
             // 
             // btnPad3
             // 
+            this.btnPad3.AutoSize = true;
             this.btnPad3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPad3.ForeColor = System.Drawing.Color.White;
-            this.btnPad3.Location = new System.Drawing.Point(168, 247);
+            this.btnPad3.Location = new System.Drawing.Point(179, 344);
             this.btnPad3.Name = "btnPad3";
             this.btnPad3.Size = new System.Drawing.Size(55, 42);
             this.btnPad3.TabIndex = 2;
@@ -239,9 +279,10 @@
             // 
             // btnPad2
             // 
+            this.btnPad2.AutoSize = true;
             this.btnPad2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPad2.ForeColor = System.Drawing.Color.White;
-            this.btnPad2.Location = new System.Drawing.Point(93, 247);
+            this.btnPad2.Location = new System.Drawing.Point(104, 344);
             this.btnPad2.Name = "btnPad2";
             this.btnPad2.Size = new System.Drawing.Size(55, 42);
             this.btnPad2.TabIndex = 1;
@@ -250,26 +291,15 @@
             // 
             // btnPad1
             // 
+            this.btnPad1.AutoSize = true;
             this.btnPad1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPad1.ForeColor = System.Drawing.Color.White;
-            this.btnPad1.Location = new System.Drawing.Point(6, 249);
+            this.btnPad1.Location = new System.Drawing.Point(17, 346);
             this.btnPad1.Name = "btnPad1";
             this.btnPad1.Size = new System.Drawing.Size(55, 42);
             this.btnPad1.TabIndex = 0;
             this.btnPad1.Text = "1";
             this.btnPad1.UseVisualStyleBackColor = true;
-            // 
-            // btnClear
-            // 
-            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.ForeColor = System.Drawing.Color.White;
-            this.btnClear.Location = new System.Drawing.Point(270, 57);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(111, 90);
-            this.btnClear.TabIndex = 17;
-            this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = true;
             // 
             // panelbar
             // 
@@ -278,35 +308,24 @@
             this.panelbar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
             this.panelbar.Location = new System.Drawing.Point(0, 0);
             this.panelbar.Name = "panelbar";
-            this.panelbar.Size = new System.Drawing.Size(813, 29);
+            this.panelbar.Size = new System.Drawing.Size(673, 29);
             this.panelbar.TabIndex = 1;
-            // 
-            // btnEnter
-            // 
-            this.btnEnter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEnter.ForeColor = System.Drawing.Color.White;
-            this.btnEnter.Location = new System.Drawing.Point(270, 159);
-            this.btnEnter.Name = "btnEnter";
-            this.btnEnter.Size = new System.Drawing.Size(100, 217);
-            this.btnEnter.TabIndex = 16;
-            this.btnEnter.Text = "Enter";
-            this.btnEnter.UseVisualStyleBackColor = true;
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(813, 537);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(673, 519);
             this.Controls.Add(this.panelPad);
             this.Controls.Add(this.panelbar);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Main";
             this.Text = "Calculator";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panelPad.ResumeLayout(false);
             this.panelPad.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
